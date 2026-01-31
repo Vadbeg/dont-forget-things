@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaving Home Checklist - Never Forget Your Essentials Again</title>
+    <meta name="description" content="Never forget your essentials again. Daily checklists for leaving home, photo confirmation for peace of mind, and history tracking.">
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #E07A5F, #F4A261);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tagline {
+            font-size: 1.4rem;
+            color: #a0a0a0;
+            margin-bottom: 32px;
+        }
+
+        /* App Store Button */
+        .app-store-btn {
+            display: inline-block;
+            background: #ffffff;
+            color: #000000;
+            padding: 14px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .app-store-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(255, 255, 255, 0.3);
+        }
+
+        .app-store-btn svg {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero-description {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            color: #c0c0c0;
+        }
+
+        /* Features */
+        .features {
+            padding: 60px 0;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 48px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 32px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: #E07A5F;
+        }
+
+        .feature-card p {
+            color: #a0a0a0;
+        }
+
+        /* Screenshots */
+        .screenshots {
+            padding: 60px 0;
+        }
+
+        .screenshots h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 48px;
+        }
+
+        .screenshots-grid {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .screenshot {
+            width: 250px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s;
+        }
+
+        .screenshot:hover {
+            transform: scale(1.02);
+        }
+
+        .screenshot-placeholder {
+            width: 250px;
+            height: 540px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px dashed rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #606060;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 60px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #a0a0a0;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: #E07A5F;
+        }
+
+        .copyright {
+            color: #606060;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .tagline {
+                font-size: 1.1rem;
+            }
+
+            .screenshot,
+            .screenshot-placeholder {
+                width: 200px;
+                height: 433px;
+            }
+
+            .features h2,
+            .screenshots h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <img src="assets/icon.png" alt="Leaving Home Checklist Logo" class="logo">
+            <h1>Leaving Home Checklist</h1>
+            <p class="tagline">Never forget your essentials again.</p>
+            <a href="#" class="app-store-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                </svg>
+                Coming Soon to App Store
+            </a>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <p class="hero-description">
+                Create daily checklists for leaving home, travelling, or any routine.
+                Attach photos for visual confirmation. Track your history and never
+                wonder "Did I lock the door?" again.
+            </p>
+        </section>
+
+        <!-- Features -->
+        <section class="features">
+            <h2>Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">✅</div>
+                    <h3>Daily Checklists</h3>
+                    <p>Create customizable checklists for your daily routines. Mark items as you complete them before heading out.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📸</div>
+                    <h3>Photo Confirmation</h3>
+                    <p>Take photos of locked doors, turned-off appliances, or packed items for visual peace of mind.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3>Multiple Lists</h3>
+                    <p>Create different lists for different occasions: Leaving Home, Travelling, Going to Work, and more.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>History Tracking</h3>
+                    <p>Review your completion history. See when you last completed each checklist and what items were checked.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Simple & Focused</h3>
+                    <p>No complicated features. Just a clean, simple interface designed to help you remember what matters.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Privacy First</h3>
+                    <p>All your data stays on your device. No cloud sync, no tracking. Your checklists are yours alone.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Screenshots -->
+        <section class="screenshots">
+            <h2>See It In Action</h2>
+            <div class="screenshots-grid">
+                <div class="screenshot-placeholder">Screenshot 1</div>
+                <div class="screenshot-placeholder">Screenshot 2</div>
+                <div class="screenshot-placeholder">Screenshot 3</div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="privacy-policy/">Privacy Policy</a>
+                <a href="terms-of-use/">Terms of Use</a>
+                <a href="mailto:vadzim.tsitko.publisher@gmail.com">Contact</a>
+            </div>
+            <p class="copyright">&copy; 2026 Leaving Home Checklist. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
